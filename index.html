@@ -201,3 +201,42 @@ sats-ticker {
   }
  
 
+  /* ── VAULT SHOWCASE (hero right) ── */
+  .vault-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+  }
+ 
+  .vault-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+ 
+  .vault-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, transparent 60%, rgba(61,255,208,0.04) 100%);
+    pointer-events: none;
+  }
+ 
+  .vault-card.featured {
+    border-color: var(--orange);
+    box-shadow: 0 0 32px rgba(255,107,26,0.12);
+  }
+ 
+  .vault-card.featured::before {
+    background: linear-gradient(135deg, transparent 50%, rgba(255,107,26,0.07) 100%);
+  }
+
+
