@@ -69,4 +69,27 @@
  
   .nav-right { display: flex; align-items: center; gap: 16px; }
  
+sats-ticker {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    font-size: 13px;
+    font-family: var(--font-display);
+  }
+ 
+  .sats-ticker .dot {
+    width: 6px; height: 6px;
+    background: var(--mint);
+    border-radius: 50%;
+    animation: pulse-dot 2s infinite;
+  }
+ 
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; box-shadow: 0 0 0 0 var(--mint-glow); }
+    50% { opacity: 0.6; box-shadow: 0 0 0 4px var(--mint-glow); }
+  }
 
