@@ -239,4 +239,101 @@ sats-ticker {
     background: linear-gradient(135deg, transparent 50%, rgba(255,107,26,0.07) 100%);
   }
 
+  /* ── VAULT RING (signature element) ── */
+  .vault-ring {
+    position: relative;
+    flex-shrink: 0;
+  }
+ 
+  .vault-ring svg { transform: rotate(-90deg); }
+ 
+  .vault-ring .ring-bg { fill: none; stroke: var(--border); stroke-width: 4; }
+  .vault-ring .ring-fill { fill: none; stroke-width: 4; stroke-linecap: round; transition: stroke-dashoffset 1s cubic-bezier(0.4, 0, 0.2, 1); }
+  .vault-ring .ring-fill.mint { stroke: var(--mint); }
+  .vault-ring .ring-fill.orange { stroke: var(--orange); }
+ 
+  .vault-ring-pct {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+  }
+ 
+  .vault-ring-pct .pct-num { font-size: 15px; }
+  .vault-ring-pct .pct-sym { font-size: 9px; color: var(--text-muted); }
+ 
+  .vault-info { flex: 1; min-width: 0; }
+  .vault-name {
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+ 
+  .vault-goal-text {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+  }
+ 
+  .vault-sats {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+  }
+ 
+  .vault-sats .sats-num {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--mint);
+  }
+ 
+  .vault-sats .sats-of {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+ 
+  .vault-members {
+    display: flex;
+    margin-top: 8px;
+    gap: -4px;
+  }
+ 
+  .member-avatar {
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    border: 2px solid var(--surface);
+    font-size: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700;
+    font-family: var(--font-display);
+    margin-right: -6px;
+  }
+ 
+  .vault-badge {
+    font-size: 10px;
+    font-weight: 600;
+    font-family: var(--font-display);
+    padding: 3px 8px;
+    border-radius: 100px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    flex-shrink: 0;
+    align-self: flex-start;
+  }
+ 
+  .vault-badge.active { background: var(--orange-glow); color: var(--orange); border: 1px solid var(--orange); }
+  .vault-badge.saving { background: var(--mint-glow); color: var(--mint); border: 1px solid var(--mint-dim); }
+ 
+
 
