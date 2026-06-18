@@ -769,5 +769,69 @@ sats-ticker {
  
   .modal-footer .btn-ghost:hover { border-color: var(--text-muted); color: var(--text); }
  
+  /* ── CONTRIBUTE MODAL ── */
+  .contrib-pool-info {
+    background: var(--bg);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+ 
+  .contrib-pool-emoji { font-size: 28px; }
+ 
+  .contrib-pool-name {
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+  }
+ 
+  .contrib-pool-progress {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+ 
+  .sat-quick-amounts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+ 
+  .sat-quick-btn {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.15s;
+    font-family: var(--font-display);
+    color: var(--text);
+  }
+ 
+  .sat-quick-btn .sat-amount {
+    font-size: 13px;
+    font-weight: 700;
+    display: block;
+    color: var(--mint);
+  }
+ 
+  .sat-quick-btn .sat-usd {
+    font-size: 10px;
+    color: var(--text-muted);
+    display: block;
+    margin-top: 2px;
+  }
+ 
+  .sat-quick-btn:hover, .sat-quick-btn.selected {
+    border-color: var(--mint);
+    background: var(--mint-glow);
+  }
+ 
 
 
