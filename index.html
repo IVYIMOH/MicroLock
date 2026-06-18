@@ -407,4 +407,161 @@ sats-ticker {
   }
  
 
+  /* ── POOLS DASHBOARD ── */
+  .dashboard {
+    padding: 0 40px 80px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+ 
+  .dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+  }
+ 
+  .dashboard-title {
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+ 
+  .pools-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+ 
+  .pool-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 28px;
+    cursor: pointer;
+    transition: all 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+ 
+  .pool-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--mint), var(--orange));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+  }
+ 
+  .pool-card:hover {
+    border-color: #333;
+    transform: translateY(-3px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.5);
+  }
+ 
+  .pool-card:hover::after { transform: scaleX(1); }
+ 
+  .pool-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+ 
+  .pool-emoji {
+    font-size: 32px;
+    margin-bottom: 10px;
+    display: block;
+  }
+ 
+  .pool-card-title {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+    margin-bottom: 4px;
+  }
+ 
+  .pool-card-desc {
+    font-size: 12.5px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+  }
+ 
+  .pool-progress-bar {
+    height: 4px;
+    background: var(--border);
+    border-radius: 2px;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+ 
+  .pool-progress-fill {
+    height: 100%;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--mint), var(--mint-dim));
+    transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
+  }
+ 
+  .pool-progress-fill.warm {
+    background: linear-gradient(90deg, var(--orange), #ffaa44);
+  }
+ 
+  .pool-nums {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 18px;
+  }
+ 
+  .pool-saved {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--mint);
+    letter-spacing: -0.5px;
+  }
+ 
+  .pool-saved.warm { color: var(--orange); }
+ 
+  .pool-goal {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+ 
+  .pool-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+ 
+  .pool-members-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+ 
+  .pool-member-count {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+ 
+  .pool-days {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-family: var(--font-display);
+  }
+ 
+  .pool-days strong {
+    color: var(--orange);
+  }
+ 
+
+
 
